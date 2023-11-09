@@ -48,3 +48,54 @@
 .el-tag {
     text-align: right;
 }
+
+.el-switch {
+    margin-left: 40px;
+
+    .el-switch__core {
+        position: absolute;
+    }
+
+    .el-switch__label--left {
+        margin-right: 5px;
+        opacity: 0;
+
+        .el-icon-moon::before {
+            color: #817f7f;
+        }
+    }
+
+    .el-switch__label--left.is-active {
+        opacity: 1;
+        position: relative;
+        z-index: 99;
+        left: 20px;
+        transition: all .5s ease-in-out;
+
+        .el-icon-moon::before {
+            color: #fff;
+        }
+    }
+
+    .el-switch__label--right {
+        margin-left: 5px;
+        opacity: 0;
+
+        .el-icon-sunny::before {
+            color: #ddd;
+        }
+    }
+
+    .el-switch__label--right.is-active {
+        opacity: 1;
+        position: relative;
+        z-index: 99;
+        right: 20px;
+        transition: all .5s ease-in-out;
+
+        .el-icon-sunny::before {
+            background: #00000069;
+            box-shadow: #0000008f 0 0 12px 5px;
+        }
+    }
+}
